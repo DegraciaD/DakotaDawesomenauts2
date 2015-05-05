@@ -3,7 +3,7 @@ require_once(__DIR__ . "/Database.php");
 //sessions perserve information so we wouldn't have to generate the information over and over again
 session_start();
 session_regenerate_id(true);
-$path = "/Dakotaawsomenauts/php/";
+$path = "/DakotaDawsomenauts/php/";
 //This code came from the database, delete the old one a ceate a new one
 $host = "localhost";
 $username = "root";
