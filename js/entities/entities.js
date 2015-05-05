@@ -98,23 +98,25 @@
         },
         
         checkAbilityKeys: function(){
-	if(me.input.isKeyPressed("skill1")){
-		//this.speedBurst();
-	}else if (me.input.isKeyPressed("skill2")){
-		//this.eatCreep();
-	}else if (me.input.isKeyPressed("skill3")){
-		console.log("skill3");
-		this.throwSpear();
-	}
-},
-throwSpear: function(){
-	if((this.now-this.lastSpear) >= game.data.spearTimer && game.data.ability3 > 0){
-		this.lastSpear = this.now;
-		var spear = me.pool.pull("spear", this.pos.x, this.pos.y, {}, this.facing);
-		me.game.world.addChild(spear, 10);
-                me.audio.play("Randomize8");
-	}
-},
+            if(me.input.isKeyPressed("skill1")){
+                //this.speedBurst();
+            }else if(me.input.isKeyPressed("skill2")){
+                //this.eatCreep();
+            }
+            else if(me.input.isKeyPressed("skill3")){
+                this.throwSpear();
+            }
+        },
+        
+        throwSpear: function(){
+            if((this.lastSpear-this.no)>= game.data.spearTimer && game.data.ability3 >= 0){                        
+            this.lastSpear = this.now;
+            var spear = me.pool.pull("throwSpear", this.pos.x, this.pos.y, {}, this.facing);
+            me.game.world.addChild(spear, 10);
+            me.audio.play("Randomize8");
+
+           }
+        },
         
         setAnimation: function () {
         if (this.attacking) {
@@ -187,11 +189,11 @@ throwSpear: function(){
         
     stopMovement: function(xdif){
          if (xdif > 0) {
-        if (this.facing === "left") {
+        if (this.facing == "left") {
         this.body.vel.x = 0;
                 }
         } else {
-        if (this.facing === "right") {
+        if (this.facing == "right") {
         this.body.vel.x = 0;
                 }
         }
@@ -200,7 +202,7 @@ throwSpear: function(){
     checkAttack: function(xdif, ydif, response){
         if (this.renderable.isCurrentAnimation("Attack") && this.now - this.lastHit >= game.data.playerAttackTimer
                 && (Math.abs(ydif) <= 40) &&
-                (((xdif > 0) && this.facing === "left") || ((xdif < 0) && this.facing === "right"))
+                (((xdif > 0) && this.facing === "left") || ((xdif < 0) && this.facing == "right"))
                 ) {
         this.lastHit = this.now;
                 //if the creeps health is less than our attack, excute coddee in if statement
@@ -218,10 +220,7 @@ throwSpear: function(){
 
         response.b.loseHealth(game.data.playerAttack);
     }
-        
-    
-      
-    });
+});
 
 
 

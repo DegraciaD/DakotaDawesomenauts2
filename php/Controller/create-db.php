@@ -1,8 +1,8 @@
 <?php
-
+//connect this web page to your updated config file instead of the database file
  require_once(__DIR__ . "/../Model/config.php");
 
-
+//make an email and username varchar and salt and passoword char they are all connected to the session
 $query = $_SESSION["connection"]->query("CREATE TABLE users("
         ."id int (11) NOT NULL AUTO_INCREMENT,"
         . "username varchar(30) NOT NULL,"

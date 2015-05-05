@@ -1,3 +1,5 @@
+/* global game */
+
 game.MiniPlayerLocation = me.Entity.extend({
    init: function(x, y, settings) {
        this.settings = settings;
@@ -44,7 +46,7 @@ game.MiniPlayerLocation = me.Entity.extend({
    
    update: function(){
        this.pos.x = (10 + (game.data.player.pos.x * 0.24));
-       this.pos.y = (10 + (game.data.player.pos.y * .28));
+       this.pos.y = (10 + (game.data.player.pos.y * 0.28));
        return true;
    }
 });

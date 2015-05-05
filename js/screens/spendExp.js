@@ -10,12 +10,12 @@ game.SpendExp = me.ScreenObject.extend({
 			me.input.bindKey(me.input.KEY.F3, "F3");
 			me.input.bindKey(me.input.KEY.F4, "F4");
 			me.input.bindKey(me.input.KEY.F6, "F6");
-			var exp1cost = ((Number(game.data.exp1) + 1) + 10);
+			var exp1cost = ((game.data.exp1 + 1) + 10);
 
 			me.game.world.addChild(new (me.Renderable.extend({
 				init: function() {
 					this._super(me.Renderable, 'init', [10, 10, 300, 50]); 
-					this.font = new me.Font("Lucida Handwriting", 25, "blue");
+					this.font = new me.Font("Lucida Handwriting", 45, "blue");
 				},
 
 				draw: function(renderer){

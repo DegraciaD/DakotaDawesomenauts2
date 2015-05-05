@@ -3,7 +3,7 @@ game.LoadProfile = me.ScreenObject.extend({
      *  action to perform on state change
      */
     onResetEvent: function () {
-        me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage('load-screen')), -10); // TODO
+        me.game.world.addChild(new me.Sprite(0, 0, me.loader.getImage("load-screen")), -10);
         document.getElementById("input").style.visibility = "visible";
         document.getElementById("load").style.visibility = "visible";
 

@@ -12,12 +12,10 @@ game.resources = [
     {name: "exp-screen", type: "image", src: "data/img/cyborg.jpg"},
     {name: "gold-screen", type: "image", src: "data/img/t.jpg"},
     {name: "spear", type: "image", src: "data/img/spear.png"},
-    {name: "load-screen", type: "image", src: "data/img/the best.jpg"},
-    {name: "new-screen", type: "image", src: "data/img/batman.jpg"},
-    {name: "justice", type: "image", src: "data/img/justice.jpg"},
-    {name: "in", type: "image", src: "data/img/in.png"},
-    {name: "int", type: "image", src: "data/img/int.jpg"},
-    {name: "minimap", type: "image", src: "data/img/minimap4.png"},
+    {name: "load-screen", type: "image", src:"data/img/cyborg.jpg"},
+    {name: "new-screen", type: "image", src:"data/img/thebest.jpg"},
+    {name: "justice", type: "image", src:"data/img/justice.jpg"},
+    
     /* Atlases 
      * @example
      * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -30,7 +28,7 @@ game.resources = [
      */
     {name: "level01", type: "tmx", src: "data/map/test.tmx"},
     {name: "level02", type: "tmx", src: "data/map/test2.tmx"},
-    {name: "level03", type: "tmx", src: "data/map/test 3.tmx"},
+    {name: "level03", type: "tmx", src: "data/map/test03.tmx"},
 
     /* Background music. 
      * @example
@@ -38,6 +36,7 @@ game.resources = [
      */
    {name: "go", type:"audio", src:"data/bgm/"},
    {name: "payback", type:"audio", src:"data/bgm/"},
+
 
     /* Sound effects. 
      * @example

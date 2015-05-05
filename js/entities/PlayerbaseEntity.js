@@ -40,7 +40,7 @@ game.PlayerbaseEntity = me.Entity.extend({
 
     }
 });
-  game.levelTrigger = me.Entity.extend({
+game.LevelTrigger = me.Entity.extend({
     init: function(x, y, settings){
         this._super(me.Entity, "init", [x, y, settings]);
         this.body.onCollision = this.onCollision.bind(this);
@@ -52,13 +52,8 @@ game.PlayerbaseEntity = me.Entity.extend({
         this.body.setCollisionMask(me.collision.types.NO_OBJECT);
         me.levelDirector.loadLevel(this.level);
         me.state.current().resetPlayer(this.xSpawn, this.ySpawn);
-        me.audio.playTrack("go");
-        var creepe = me.pool.pull("EnemyCreep", 1000, 0, {});
-        me.game.world.addChild(creepe, 30);
-            
-        
+        me.audio.playTrack("go");  
     }
 });
-
 
 
